@@ -4,10 +4,12 @@ const User = require("../models/user");
 const Product = require("../models/product");
 const Safety = require("../models/safety");
 const Tracking = require("../models/tracking");
+// const passport = require("passport");
 const Validate = require("./validate");
 
+
 //Logs the user into an account
-userRouter.post();
+userRouter.post("/login", async (req, res) => {});
 
 //Creates an employee user account
 userRouter.post("/createAccount", async (req, res) => {});
@@ -52,7 +54,7 @@ userRouter.post("/safety", async (req, res) => {
 });
 
 //Stores a new product in the database
-userRouter.post();
+userRouter.post("/products", async (req, res) => {});
 
 //Returns all tracking entries in the database (with filter)
 userRouter.get("/tracking/:date/:area/:shift/:operator", async (req, res) => {
@@ -80,6 +82,7 @@ userRouter.get(
     res.status(200).json(products);
   }
 );
+
 
 //Returns all bad products in the system (with filter) *Will probably change to rework*
 userRouter.get(
@@ -119,3 +122,6 @@ userRouter.get(
     res.status(200).json(products);
   }
 );
+
+
+module.exports = userRouter;

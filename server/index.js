@@ -4,6 +4,16 @@ const userRouter = require("./routes/users");
 
 const app = express();
 
+//MiddleWare
+
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+
+// passport.use(User.createStrategy());
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
+
 // Routes
 app.use("/user", userRouter);
 
